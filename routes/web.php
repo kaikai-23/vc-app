@@ -43,10 +43,10 @@ Route::get('/view/word/{name}/{msg}', function ($name, $msg)
     ]);
 });
 
-Route::get('/controller/hello', 
-[App\Http\Controllers\MessageController::class, 
-'hello']);
+Route::get('/controller/hello', [App\Http\Controllers\MessageController::class, 'hello']);
 
 Route::get('/controller/var', [App\Http\Controllers\MessageController::class, 'var']);
 
 Route::get('/controller/word/{msg}', [App\Http\Controllers\MessageController::class, 'word']);
+
+Route::get('/controller/word/{name}/{msg}', [App\Http\Controllers\MessageController::class, 'word2']);
